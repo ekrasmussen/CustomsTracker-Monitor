@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomsTracker_Monitor.Model.APIModel
 {
-    public class AllPlayer
+    public class Red
     {
         public string Puuid { get; set; }
         public string Name { get; set; }
@@ -22,11 +22,14 @@ namespace CustomsTracker_Monitor.Model.APIModel
         public SessionPlaytime Session_Playtime { get; set; }
         public Behavior Behavior { get; set; }
         public Platform Platform { get; set; }
-        public AbilityCasts Ability_Casts { get; set; }
+        public AbilityCasts AbilityCasts { get; set; }
         public Assets Assets { get; set; }
         public Stats Stats { get; set; }
         public Economy Economy { get; set; }
         public int Damage_Made { get; set; }
         public int Damage_Recieved { get; set; }
+        public bool Has_Won { get; set; }
+        public int Rounds_Won { get; set; }
+        public int Rounds_Lost { get; set; }
     }
 }

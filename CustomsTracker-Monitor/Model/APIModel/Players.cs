@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomsTracker_Monitor.Model.APIModel
 {
-    internal class Players
+    public class Players
     {
         public List<AllPlayer> All_Players { get; set; }
         public List<Red> Red { get; set; }

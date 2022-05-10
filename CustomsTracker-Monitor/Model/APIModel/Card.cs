@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace CustomsTracker_Monitor.Model.APIModel
 {
-    public class APIResponse
+    public class Card
     {
-        public int Status { get; set; }
-        public Data data { get; set; }
+        public string Small { get; set; }
+        public string Large { get; set; }
+        public string Wide { get; set; }
     }
 }

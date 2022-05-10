@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace CustomsTracker_Monitor.Model.APIModel
 {
-    public class APIResponse
+    public class Behavior
     {
-        public int Status { get; set; }
-        public Data data { get; set; }
+        public int AFK_Rounds { get; set; }
+        public FriendlyFire Friendly_Fire { get; set; }
+        public int Rounds_In_Spawn { get; set; }
     }
 }

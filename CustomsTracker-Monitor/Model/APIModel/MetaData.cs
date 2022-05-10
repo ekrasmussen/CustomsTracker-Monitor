@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomsTracker_Monitor.Model.APIModel
 {
-    internal class MetaData
+    public class MetaData
     {
         public string Map { get; set; }
         public string Game_Version { get; set; }

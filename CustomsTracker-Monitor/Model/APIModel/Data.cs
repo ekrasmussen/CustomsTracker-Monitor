@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomsTracker_Monitor.Model.APIModel
 {
-    internal class Data
+    public class Data
     {
         public MetaData MetaData { get; set; }
         public Players players { get; set; }
