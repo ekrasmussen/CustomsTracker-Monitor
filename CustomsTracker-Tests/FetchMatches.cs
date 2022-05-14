@@ -12,6 +12,8 @@ namespace CustomsTracker_Tests
         [InlineData("yari","zard","ap")]
         [InlineData("Cameron","345","eu")]
         [InlineData("lilac", "bean", "na")]
+        [InlineData("WHO Davud", "noi", "eu")]
+        [InlineData("TGH", "FiFi", "eu")]
         public async void FetchPastMatches(string username, string tag, string region)
         {
             // Arrange

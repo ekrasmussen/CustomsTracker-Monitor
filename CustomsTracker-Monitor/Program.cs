@@ -1,13 +1,12 @@
-﻿using CustomsTracker_Monitor.Model.APIModel;
+﻿using CustomsTracker_Monitor.Model.APIAccount;
+using CustomsTracker_Monitor.Model.APIModel;
 using CustomsTracker_Monitor.Services.APIAccess;
 using System.Threading.Tasks;
 
 MatchAccess access = new MatchAccess();
+AccountAccess accountAccess = new AccountAccess();
 
-string username = "btslover615";
-string tag = "2944";
-string region = "na";
 
-MatchResponse matches = await access.GetAll(username, tag, region);
+AccountResponse response = await accountAccess.GetAccount("Zua", "CHONK");
 
-Console.WriteLine(matches.data[0].Is_Available);
+Console.WriteLine(response.Data.Account_Level);
