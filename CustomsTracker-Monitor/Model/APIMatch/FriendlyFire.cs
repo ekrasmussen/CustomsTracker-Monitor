@@ -8,7 +8,7 @@ namespace CustomsTracker_Monitor.Model.APIModel
 {
     public class FriendlyFire
     {
-        public int Incoming { get; set; }
-        public int Outgoing { get; set; }
+        public int? Incoming { get; set; }
+        public int? Outgoing { get; set; }
     }
 }

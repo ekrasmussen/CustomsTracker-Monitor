@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomsTracker-Monitor", "CustomsTracker-Monitor\CustomsTracker-Monitor.csproj", "{64CC3AA4-6EEE-4F4A-AC43-432FD5207D7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomsTracker-Monitor", "CustomsTracker-Monitor\CustomsTracker-Monitor.csproj", "{64CC3AA4-6EEE-4F4A-AC43-432FD5207D7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomsTracker-Tests", "CustomsTracker-Tests\CustomsTracker-Tests.csproj", "{E8CBED2C-CA15-476E-8196-24F60060E663}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{64CC3AA4-6EEE-4F4A-AC43-432FD5207D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64CC3AA4-6EEE-4F4A-AC43-432FD5207D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64CC3AA4-6EEE-4F4A-AC43-432FD5207D7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8CBED2C-CA15-476E-8196-24F60060E663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8CBED2C-CA15-476E-8196-24F60060E663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8CBED2C-CA15-476E-8196-24F60060E663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8CBED2C-CA15-476E-8196-24F60060E663}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

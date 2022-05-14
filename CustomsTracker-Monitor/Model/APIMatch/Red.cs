@@ -28,8 +28,8 @@ namespace CustomsTracker_Monitor.Model.APIModel
         public Economy Economy { get; set; }
         public int Damage_Made { get; set; }
         public int Damage_Recieved { get; set; }
-        public bool Has_Won { get; set; }
-        public int Rounds_Won { get; set; }
-        public int Rounds_Lost { get; set; }
+        public bool? Has_Won { get; set; }
+        public int? Rounds_Won { get; set; }
+        public int? Rounds_Lost { get; set; }
     }
 }

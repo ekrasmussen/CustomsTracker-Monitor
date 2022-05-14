@@ -13,5 +13,6 @@ namespace CustomsTracker_Monitor.Model.APIModel
         public Teams teams { get; set; }
         public List<Round> Rounds { get; set; }
         public List<Kill> Kills { get; set; }
+        public bool Is_Available { get; set; } = true;
     }
 }

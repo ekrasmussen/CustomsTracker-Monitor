@@ -9,6 +9,6 @@ namespace CustomsTracker_Monitor.Model.APIModel
     public class MatchResponse
     {
         public int Status { get; set; }
-        public Data data { get; set; }
+        public List<Data> data { get; set; }
     }
 }
