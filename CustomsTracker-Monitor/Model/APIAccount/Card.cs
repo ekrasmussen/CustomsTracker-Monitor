@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomsTracker_Monitor.Model.APIAccount
 {
-    internal class Card
+    public class Card
     {
         public string Small { get; set; }
         public string Large { get; set; }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CustomsTracker_Monitor.Services.APIAccess
 {
-    internal class AccountAccess : Connection
+    public class AccountAccess : Connection
     {
         public AccountAccess() : base()
         {

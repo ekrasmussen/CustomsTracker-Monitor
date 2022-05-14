@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomsTracker_Monitor.Model.APIAccount
 {
-    internal class Data
+    public class Data
     {
         public string Puuid { get; set; }
         public string Region { get; set; }
