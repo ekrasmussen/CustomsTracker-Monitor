@@ -11,7 +11,7 @@ namespace CustomsTracker_Tests
 {
     public class FetchMMR
     {
-        [Theory (DisplayName = "Fetch Account MMR")]
+        [Theory (DisplayName = "Fetch Account MMR By Username")]
         [InlineData("btslover615", "2944", "na")]
         [InlineData("Zua", "CHONK", "eu")]
         [InlineData("yari", "zard", "ap")]
@@ -27,7 +27,7 @@ namespace CustomsTracker_Tests
 
             // Act
             access = new MMRAccess();
-            response = await access.GetRank(username, tag, region);
+            response = await access.GetRankByUsername(username, tag, region);
             
             // Assert
             Assert.NotNull(response);

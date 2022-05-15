@@ -9,9 +9,15 @@ namespace CustomsTracker_Monitor.Services.APIAccess
 {
     public class MMRAccess : Connection
     {
-        public async Task<MMRResponse> GetRank(string username, string tag, string region)
+        public async Task<MMRResponse> GetRankByUsername(string username, string tag, string region)
         {
             MMRResponse response = await GetFromAPI<MMRResponse>($"/valorant/v1/mmr/{region}/{username}/{tag}");
+            return response;
+        }
+
+        public async Task<MMRResponse> GetRankByPUUID(string puuid, string region)
+        {
+            MMRResponse response = await GetFromAPI<MMRResponse>($"valorant/v1/by-puuid/mmr/{region}/{puuid}");
             return response;
         }
     }
