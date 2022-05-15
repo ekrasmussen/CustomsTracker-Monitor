@@ -7,6 +7,6 @@ MatchAccess access = new MatchAccess();
 AccountAccess accountAccess = new AccountAccess();
 
 
-AccountResponse response = await accountAccess.GetAccount("Zua", "CHONK");
+AccountResponse response = await accountAccess.GetAccountByUsername("Zua", "CHONK");
 
-Console.WriteLine(response.Data.Account_Level);
+Console.WriteLine(response.Data.Puuid);

@@ -14,7 +14,7 @@ namespace CustomsTracker_Monitor.Services.APIAccess
 
         }
 
-        public async Task<AccountResponse> GetAccount(string username, string tag)
+        public async Task<AccountResponse> GetAccountByUsername(string username, string tag)
         {
             AccountResponse response = await GetFromAPI<AccountResponse>($"valorant/v1/account/{username}/{tag}");
 

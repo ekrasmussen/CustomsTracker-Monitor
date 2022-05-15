@@ -23,7 +23,7 @@ namespace CustomsTracker_Tests
             //Act
             access = new MatchAccess();
 
-            response = await access.GetAll(username, tag, region);
+            response = await access.GetByUsername(username, tag, region);
 
             //Assert
 

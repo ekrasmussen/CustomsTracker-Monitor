@@ -24,7 +24,7 @@ namespace CustomsTracker_Tests
         {
             AccountAccess access = new AccountAccess();
 
-            AccountResponse response = await access.GetAccount(username, tag);
+            AccountResponse response = await access.GetAccountByUsername(username, tag);
 
             Assert.NotNull(response);
             Assert.Equal(username, response.Data.Name);
