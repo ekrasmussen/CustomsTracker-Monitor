@@ -27,7 +27,7 @@ namespace CustomsTracker_Tests
 
             // Act
             access = new MMRAccess();
-            response = await access.GetRankByUsername(username, tag, region);
+            response = await access.GetRank(username, tag, region);
             
             // Assert
             Assert.NotNull(response);
