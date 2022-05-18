@@ -104,7 +104,7 @@ async Task OnTick(string user, string tag, string region, CancellationToken toke
     {
         MatchResponse response = await access.GetByUsername(user, tag, region);
 
-        if (response.data[0].Is_Available == true && response.data[0].MetaData.MatchID != previousPUUID)
+        if (response.data[0].Is_Available == true && response.data[0].MetaData.MatchID != previousPUUID && startTime < response.data[0].MetaData.Game_Start)
         {
             matchResult = new List<PlayerScore>();
             Console.WriteLine();
