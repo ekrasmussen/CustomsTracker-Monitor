@@ -15,6 +15,7 @@ string tag = "none";
 string region = "none";
 string previousPUUID = "none";
 int startTime = 0;
+int interval = 15000;
 
 Console.WriteLine("Type 'help' to see all available commands and get started");
 
@@ -45,6 +46,19 @@ while (true)
     {
         Task.Run(() => StartTimer(username, tag, region, token));
     }
+    else if(command == "interval")
+    {
+        int result;
+        Console.Write("New Interval: ");
+        if(Int32.TryParse(Console.ReadLine(), out result))
+        {
+            interval = result;
+        }
+        else
+        {
+            interval = 15000;
+        }
+    }
     else if (command == "help")
     {
         Console.WriteLine("register:");
@@ -62,6 +76,11 @@ while (true)
 
         Console.WriteLine();
 
+        Console.WriteLine("interval: ");
+        Console.WriteLine("    Sets the interval timer for api requests in milliseconds (default is 15000)");
+
+        Console.WriteLine();
+
         Console.WriteLine("help: ");
         Console.WriteLine("    Displays this page again");
     }
@@ -74,7 +93,7 @@ async Task StartTimer(string user, string tag, string region, CancellationToken 
     while (!token.IsCancellationRequested)
     {
         await OnTick(user, tag, region, token);
-        await Task.Delay(15000);
+        await Task.Delay(interval);
     }
 }
 
