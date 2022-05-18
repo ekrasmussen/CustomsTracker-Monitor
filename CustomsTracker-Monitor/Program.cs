@@ -32,7 +32,7 @@ while (true)
     {
         Console.Write("User: ");
         string user = Console.ReadLine();
-        Console.Write("Tag: ");
+        Console.Write("Tag (without the #): ");
         string _tag = Console.ReadLine();
         Console.Write("Region (eu/na/ap): ");
         string _region = Console.ReadLine();
