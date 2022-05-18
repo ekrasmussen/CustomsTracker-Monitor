@@ -85,7 +85,7 @@ async Task OnTick(string user, string tag, string region, CancellationToken toke
     {
         MatchResponse response = await access.GetByUsername(user, tag, region);
 
-        if (response.data[0].Is_Available == true && response.data[0].MetaData.MatchID != previousPUUID && startTime < response.data[0].MetaData.Game_Start)
+        if (response.data[0].Is_Available == true && response.data[0].MetaData.MatchID != previousPUUID)
         {
             matchResult = new List<PlayerScore>();
             Console.WriteLine();
@@ -102,7 +102,8 @@ async Task OnTick(string user, string tag, string region, CancellationToken toke
                     Rank = mmr.Data.CurrentTierPatched,
                     Kills = response.data[0].players.All_Players[i].Stats.Kills,
                     Deaths = response.data[0].players.All_Players[i].Stats.Deaths,
-                    Assists = response.data[0].players.All_Players[i].Stats.Assists
+                    Assists = response.data[0].players.All_Players[i].Stats.Assists,
+                    MatchType = response.data[0].MetaData.Mode
                 };
                 matchResult.Add(player);
                 //PrintRank(response.data[0].players.All_Players[i].Name, mmr.Data.CurrentTierPatched);
@@ -119,7 +120,15 @@ async Task OnTick(string user, string tag, string region, CancellationToken toke
 
 void PrintMatch(List<PlayerScore> scores)
 {
-    List<PlayerScore> sorted = scores.OrderByDescending(s => s.Score).ToList();
+    List<PlayerScore> sorted;
+    if(scores[0].MatchType == "Deathmatch")
+    {
+        sorted = scores.OrderByDescending(s => s.Kills).ToList();
+    }
+    else
+    {
+        sorted = scores.OrderByDescending(s => s.Score).ToList();
+    }
 
     for(int i = 0; i < sorted.Count; i++)
     {
@@ -134,7 +143,7 @@ void PrintRank(int position, PlayerScore score)
         score.Rank = "Unrated";
     }
 
-    if(score.Kills == null)
+    if (score.Kills == null)
     {
         score.Kills = 0;
     }
@@ -198,3 +207,4 @@ void PrintRank(int position, PlayerScore score)
     Console.Write($"-        {formattedKDA}");
     Console.WriteLine();
 }
+

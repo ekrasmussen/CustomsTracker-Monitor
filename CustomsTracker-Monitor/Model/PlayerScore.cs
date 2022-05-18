@@ -14,5 +14,6 @@ namespace CustomsTracker_Monitor.Model
         public int? Kills { get; set; }
         public int? Deaths { get; set; }
         public int? Assists { get; set; }
+        public string MatchType { get; set; }
     }
 }
